@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		//크기 순서 : width()<innerWidth()<outerWidth() 순으로 커짐 <height도 동일>
+		var $txt1=$(".txt_1 span"),
+			$txt2=$(".txt_2 span"), 
+			$box=$(".box");
+		
+		//position():포지션 기준이 되는 요소를 기준으로 선택한 요소에서 가로/세로로 떨어진 위치의 좌푯값을 반환하거나 변경시 사용
+		//offset():문서를 기준으로 선택한 요소의 가로/세로로 떨어진 위치의 좌푯값ㅇ르 반환하거나 변경할때사용
+		var off_t=$box.offset().top;
+		var pos_t=$box.position().top;
+		
+		$txt1.text(off_t);
+		$txt2.text(pos_t);
+			
+	
+	});
+</script>
+<style type="text/css">
+*{padding:0; margin:0;}
+#box_wrap{
+	width:300px;
+	height:200px;
+	margin:50px auto 0;
+	position:relative;
+	background-color:pink;
+}
+.box{
+width:50px; height:50px;
+position:absolute;
+left:100px;
+top:50px;
+background-color: aqua;
+}
+</style>
+</head>
+<body>
+	<div id="box_wrap">
+		<p class="box">박스</p>
+	</div>
+		<p class="txt_1">절대 top위칫값: <span></span></p>
+		<p class="txt_2">상대 top위칫값: <span></span></p>
+	
+</body>
+</html>

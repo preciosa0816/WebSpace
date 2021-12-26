@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+$(function() {//플러그인 제작 
+	
+	//선택한 요소에 open플러그인을 적용하여 이벤트타입과 메시지를 매개변수로 전달하면
+	//해당 이벤트가 발생할 때 지정한 메시지를 경고창으로 받음
+	$.fn.open=function(eventType,message){ //$.fn.확장함수명=function(매개변수1,매개변수2,...)
+		var ts=$(this);
+		$.each(ts,function(i,o){
+			$(o).on(eventType,function(){
+				alert(message);
+			});
+		});
+	}
+	$(".btn1").open("mouseover","welcome!");
+	$(".btn2").open("click","hello!");
+	
+});
+</script>
+</head>
+<body>
+<p><button class="btn1">btn1</button>
+<p><button class="btn2">btn2</button>
+<p><button class="btn3">btn3</button>
+</body>
+</html>

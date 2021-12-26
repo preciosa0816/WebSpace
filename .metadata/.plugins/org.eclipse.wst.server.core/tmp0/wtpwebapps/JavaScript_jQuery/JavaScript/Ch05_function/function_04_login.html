@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var rightId="aaaa";
+var rightPw=1234;
+//아이디 입력
+var id = prompt("아이디를 입력하세요","");
+//패스워드 입력
+var pw = prompt("비밀번호를 입력하세요","");
+
+function login(id,pw){//===쓸 
+	if(id===rightId&&parseInt(pw)===rightPw){
+		alert("환영합니다.");
+	}else if(id==rightId&&pw!=rightPw){
+		alert("잘못된 비밀번호입니다.");
+	}else if(id!=rightId&&pw==rightPw){
+		alert("존재하지 않는 ID입니다");
+	}else{
+		alert("다시 입력해주세요");
+	}
+}
+
+login(id,pw);
+</script>
+
+</body>
+</html>

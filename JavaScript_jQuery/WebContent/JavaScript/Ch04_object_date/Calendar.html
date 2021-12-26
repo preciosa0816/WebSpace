@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Calendar</title>
+<style type="text/css">
+body{
+font-size:25px;
+}
+table{
+width:500px;
+	
+}
+
+caption{
+	padding:3px;
+	background-color: #f0f0f5;
+	font-weight:bold;
+	font-size:40px;
+	height:60px;
+}
+
+#pink{
+	text-align:center;
+	background-color: #ffe6ff;
+	
+}
+td,tr{
+width:50px;
+height:70px;
+padding-top:0;
+background-color: #ffddcc;
+text-align:right;
+}
+#today{
+color:red;
+}
+p{
+padding:0;
+margin:0;
+text-align:center;
+color:purple;
+font-size:20px;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+var set = prompt("1~12월 중 선택해주세요","1");
+var today=new Date();
+today.setMonth(set-1);
+var year= today.getFullYear();
+var month = today.getMonth()+1;
+var lday=[31,28,31,30,31,30,31,31,30,31,30,31];
+var last=lday[set-1];
+var the= today.getDate();
+var hour = today.getHours();
+var min = today.getMinutes();
+var check;
+if(hour>=0&&hour<12){
+	check="오전";
+}else{
+	check="오후";
+}
+var num=1;
+var date=["일","월","화","수","목","금","토"];
+var t="<table align=\"center\"><caption align=\"center\";>"+year+"년 "+month+"월</caption>";
+t+="<tr id=pink align=\"center\">";
+
+for(var k=0;k<=6;k++){
+	t+="<td id=pink>"+date[k]+"</td>";		
+}
+t+="</tr>";
+for(var i=0;i<6;i++){
+	if(num==last+1)break;
+	t+="<tr align=right valign=top>";
+	
+	for(var k=1;k<=7;k++){
+		if(num==the) {
+			t+="<td id=today>"+num+"<br><p id=purple>"+check+hour+":"+min+"</p></td>";
+			num++;
+			continue;
+		};
+		
+		t+="<td>"+num+"</td>";
+		num++;
+		if(num==last+1)break;
+	}
+	t+="</tr>";
+
+}
+	t+="</table>";
+	console.log(t);
+	document.write(t);
+
+
+</script>
+
+</body>
+</html>

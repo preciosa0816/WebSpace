@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".btn2").hide();
+		
+		$(".btn1").on("click",function(){
+			$(".box").slideUp(1000,"linear",function(){
+				$(".btn1").hide();
+				$(".btn2").show();
+			});
+		});
+		
+		$(".btn2").on("click",function(){
+			$(".box").fadeIn(1000,"swing",function(){
+				$(".btn2").hide();
+				$(".btn1").show();
+			});
+		});
+		
+		$(".btn3").on("click",function(){
+			$(".box").slideToggle(1000,"linear");
+		});
+		
+		$(".btn4").on("click",function(){
+			$(".box").fadeTo("fast",0.3);
+		});
+		
+		$(".btn5").on("click",function(){
+			$(".box").fadeTo("fast",1);
+		});
+		
+	});
+</script>
+<style type="text/css">
+.content{
+	width:400ps;
+	background-color:#eeee;
+}
+</style>
+</head>
+<body>
+<p>
+	<button class="btn1">slideUp</button>
+	<button class="btn2">fadnIn</button>
+</p>
+<p>
+	<button class="btn3">toggleSlide</button>
+</p>
+<p>
+	<button class="btn4">fadeTo(0.3)</button>
+	<button class="btn5">fadnTo(1)</button>
+</p>
+<div class="box">
+	<div class="content">
+	Lorem ipsum dolor sit amet, consectutur adipiscing elit. Ut....
+	</div>
+</div>
+</body>
+</html>

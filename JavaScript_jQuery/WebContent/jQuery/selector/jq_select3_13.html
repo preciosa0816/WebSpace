@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("strong").unwrap(); //strong이 감싸는 부모요소 제거
+		$(".ct1").wrap("<div/>");//class값이 ct1인 요소를 <div>로 감싸기(개별)
+		$(".ct2").wrapAll("<div/>");//class값이 ct2인 요소모두 감싸기
+		$("li").wrapInner("<h3/>") //<li>요소의 모든 하위요소를 h3로 감싸기
+			
+	});
+</script>
+<style type="text/css">
+	div{background-color: aqua;}
+	h1{color:red}
+</style>
+</head>
+<body>
+	<h1 id="tit_1">
+		<strong>객체 조작 및 생성</strong>
+	</h1>
+	<p class="ct1">내용1</p>
+	<p class="ct1">내용2</p>
+	<p class="ct2">내용3</p>
+	<p class="ct2">내용4</p>
+	<ul>
+		<li>내용3</li>
+		<li>내용4</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>HTML4</title>
+<style>
+
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 0.9em;
+}
+
+div#header{
+	padding: 10px;
+	color: white;
+	background-color: black;
+}
+div#footer {
+	padding: 20px;
+	color: white;
+	background-color: black;
+	text-align:center;
+	clear:both;
+}
+
+/* div#content { */
+/*   padding: 10px; */
+/*   background-color: lightgrey; */
+
+/* } */
+div#article {
+
+	background-color: white;
+float: left;
+	padding-left: 30px;
+	height:300px;
+}
+
+div#nav {
+
+	background-color: lightgrey;
+	float: left;
+
+	height:300px;
+	
+}
+
+div.menu ul {
+	padding: 10px;
+}
+
+div.menu ul li {
+	margin: 10px;
+	font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  div#nav, div#article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+	<div id="header">
+		<h1>입양하기</h1>
+	</div>
+	
+	<div id="nav" class="menu">
+		<ul >
+			<li><a href="#">애완견 종류</a></li>
+			<li><a href="#">입양하기</a></li>
+			<li><a href="#">건강돌보기</a></li>
+			<li><a href="#">더불어살기</a></li>
+		</ul>
+	</div>
+	
+	<div id="article" class="menu">
+		<h1>강아지 용품 준비하기</h1>
+    <ul>
+    <li>강아지 집</li>
+    <li>강아지 먹이</li>
+    <li>밥그릇, 물병</li>
+    <li>이름표, 목줄</li>
+    <li>장난감, 개껌</li>
+    <li>애견용 간식</li>
+    <li>브러쉬 빗, 털 제거 롤</li>
+    <li>귀 세정액, 구강스프레이, 기타 영양제</li>
+    <li>샴푸, 긴스, 애견용 타올</li>    
+    </ul>    
+	</div>
+
+
+	<div id="footer">
+		<p>Copyright 2018 nuridog</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//키보드 자판을 눌렀을 때, 고유키값을 출력(모두가능)
+		$("#user_id").keydown(function(e) {
+			$(this).css("background","violet");
+			$('#txt1').text(e.keyCode);
+		});
+		//키보드 자판을 눌렀을 때, 고유키값을 출력(문자X)
+		$("#user_id").keypress(function(e) {
+			$(this).css("background","pink");
+			$('#txt2').text(e.keyCode);
+		});
+		$("#user_id").keyup(function() {
+			$(this).css("background","green");
+		});
+	});
+</script>
+</head>
+<body>
+<h3>Push(마우스,키보드)</h3>
+마우스: mousedown()-마우스누른상태, mouseup()-마우스눌렀다놓은상태<br>
+키보드 : keypress(),keydown(),keyup()<br>
+keypress()-문자키 제외한 키코드값 반환<br>
+keydown()-모든코드값 반환 <br>
+<p><input type="text" name="user_id" id="user_id"></p>
+<p id="txt1">keydown</p>
+<p id="txt2">keypress</p>
+</body>
+</html>

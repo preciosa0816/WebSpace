@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<style>
+	.spotlight{background-color: yellow}
+	.redtext{color:red}
+	.bluetext{color:blue}
+	.italictext{font-style:italic}
+	.largetext{font-size:30px}
+	.box{border:2px dashed green}
+</style>
+<script>
+	var output=function(selector){
+		var resulttext="";
+		console.log("\n"+selector+"로 검색된 Element 개수 : "+$(selector).size());
+		$(selector).each(function() {
+			resulttext+=$(this).text()+"\t"
+		});
+		console.log(resulttext+"\n");
+	};
+	
+	$(document).ready(function() {
+		$('span[id]').addClass('spotlight');
+		$('span[id="simpletext1"]').addClass('redtext');
+		$('span[id!="simpletext1"]').addClass('bluetext');
+		$('span[id^="complex"]').addClass('italictext');
+		$('span[id$="text1"]').addClass('largetext');
+		$('span[id*="text"]').addClass('box');
+		
+		output('span[id]');
+		output('span[id="simpletext1"]');
+		output('span[id!="simpletext1"]');
+		output('span[id^="complex"]');
+		output('span[id$="text1"]');
+		output('span[id*="text"]');
+	});
+</script>
+</head>
+<body>
+<span id="simpletext1">simple</span>
+<span class="simpletext2">simple2</span>
+<span id="complextext1">jQuery</span>
+<span id="complextext2">jQuery2</span>
+<span id="complex">Web</span>
+</body>
+</html>

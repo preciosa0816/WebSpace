@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".btn_1.on").on("mouseover focus",function(){
+			alert("HELLO!");
+		});
+		//이벤트 등록후 새롭게 생성되거나 복제된 요소에는 이벤트 등록불가
+		$(".btn_1").addClass("on");
+		
+		$(document).on("mouseover focus",".btn_2.on",function(){
+			alert("WELCOME!");
+		});
+		$(".btn_2").addClass("on");
+	});
+	
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p><button class="btn_1">버튼1</button></p>
+		<p><button class="btn_2">버튼2</button></p>
+	</div>
+</body>
+</html>

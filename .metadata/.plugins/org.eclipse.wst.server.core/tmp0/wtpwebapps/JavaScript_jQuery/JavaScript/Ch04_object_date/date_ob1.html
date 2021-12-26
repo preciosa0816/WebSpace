@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var t = new Date();
+		var nowMonth = t.getMonth()+1;
+		var nowDate = t.getDate();
+		var nowDay = t.getDay();
+		
+		document.write("현재 월 : "+(nowMonth+1),"<br>");//10 :숫자가더해짐
+		document.write("현재 일 : "+nowDate,"<br>");
+		document.write("현재 요일 : "+nowDay,"<br>");
+		
+		var m = new Date(2002,4,31);
+		var theMonth = m.getMonth()+1;
+		var theDate = m.getDate();
+		var theDay = m.getDay();
+		
+		document.write("2002년 월 : "+theMonth+1,"<br>"); //51 :문자열이됨
+		document.write("2002년 일 : "+theDate,"<br>");
+		document.write("2002년 요일 : "+theDay,"<br>");
+		
+	</script>
+</body>
+</html>

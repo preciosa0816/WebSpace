@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax.load()를 이용한 서버데이터 삽입</title>
+<script src="../jQuery/js/jquery-3.4.1.js"></script>
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$("#menu1").click(function() {
+			$("#message1").load('menu.html');
+		});
+		
+		$("#menu2").click(function() {
+			$("#message2").load('menu.html li');
+		});
+	});
+</script>
+<style type="text/css">
+div{
+	width:180px; height:80px; margin:3px;
+	float:left;
+}
+</style>
+</head>
+<body>
+<div>
+	<a href="#" id="menu1">메뉴보기1</a>
+	<span id="message1"></span>	
+</div>
+<div>
+	<a href="#" id="menu2">메뉴보기2</a>
+	<span id="message2"></span>
+</div>
+</body>
+</html>

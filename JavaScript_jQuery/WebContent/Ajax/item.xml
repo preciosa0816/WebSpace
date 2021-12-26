@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="1" name="lemon">
+		<price>3000</price>
+		<description>lemonle</description>
+	</item>
+
+	<item id="2" name="kiwi">
+		<price>2000</price>
+		<description>kiwiki</description>
+	</item>
+
+	<item id="3" name="blueberry">
+		<price>5000</price>
+		<description>blueberrybl</description>
+	</item>
+</items>

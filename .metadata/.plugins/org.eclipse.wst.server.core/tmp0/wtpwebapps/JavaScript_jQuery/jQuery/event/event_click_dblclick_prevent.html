@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//return false를 통한 연결차단
+		$("#btn1").on('click',function(){
+			$('p').css("background","lightgreen");
+			return false;
+		})
+		//reventDefault() 를 통한 연결차단
+		$("#btn2").on('click',function(e){
+			e.preventDefault();
+			$('p').css("background","purple");
+		})
+		//원래모습
+		$("#btn3").click(function() {
+			$('p').css("background","purple");
+		});
+		
+	});
+</script>
+</head>
+<body>
+<a href="http://www.google.com" id="btn1">click1</a><br><br>
+<a href="http://www.google.com" id="btn2">click2</a><br><br>
+<a href="http://www.google.com" target="_blank" id="btn3">click3</a><br><br>
+
+<p>내용(배경색)</p>
+</body>
+</html>

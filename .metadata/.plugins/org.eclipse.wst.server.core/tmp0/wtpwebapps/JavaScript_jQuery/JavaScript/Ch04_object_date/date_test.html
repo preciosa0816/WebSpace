@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	//var t=new Date();
+	var month=prompt("1-12월 사이를 입력하세요","0");
+	var D=new Date();
+	var date=[31,28,31,30,31,30,31,31,30,31,30,31];
+	//t.setDate(1);
+	if(month>12|month<1) {
+		document.write("<h1>잘못 선택하였습니다</h1>");
+	}else{
+		document.write(date[month-1],"<br>");
+// 		document.write(month,"<br>");
+// 		t.setMonth(month);		
+// 		var m=t.getTime();
+// 		t.setMonth(month+1);
+// 		var n=t.getTime();
+// 		var result=n-m;
+
+		D.setMonth(month);
+		D.setDate(0);
+		
+// 		document.write(m,"<br>");
+// 		document.write(n,"<br>");
+// 		document.write(n-m,"<br>");
+// 		document.write(Math.ceil(result/(60*1000*60*24)),"<br>");
+		
+		document.write("<h1>"+D.getDate()+"일</h1>");
+		
+		
+	}	
+	</script>
+	1월~12월 사이를 입력해주세요<br>
+	<form action="abc.jsp"> <!-- abc.jsp로 submit한 파일이 이동함 -->
+	<input type="number" name="dal" min="1" max="12">
+	<input type="submit"> 
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

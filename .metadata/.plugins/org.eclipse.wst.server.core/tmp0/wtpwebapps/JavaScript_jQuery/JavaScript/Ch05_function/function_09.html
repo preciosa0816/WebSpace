@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+즉시실행함수(); :: 충돌방지, 함수의 정의와 동시에 실행되는 함수<br>
+최초에 한번만 호출되며, 다시 호출할 수 없다.
+<script type="text/javascript">
+//익명 즉시 실행함수
+(function(){
+	var num=100; //지역함수
+	function menu(){
+		num+=100;
+		alert(num);
+	}
+	menu(); //200출력
+}());
+
+(function(){
+	var num=100; //지역함수
+	function menu(){
+		alert(num);
+	}
+	//menu(); //100출력
+}());
+</script>
+</body>
+</html>

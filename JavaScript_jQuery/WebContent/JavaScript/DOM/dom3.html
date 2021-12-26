@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+<h1 id="title">마우스 아웃</h1>
+<a href="#" id="btn"><img src="images/btn_out.gif" alt="버튼" /></a>
+<p id="img_src"></p>
+<script>
+//<![CDATA[ //'<>는 tag임 (부호x)라는 표시'
+
+   var theBtn=document.getElementById("btn");
+   var s=document.getElementById("img_src");
+
+//버튼위에 mouseover 되었을때
+	theBtn.onmouseover = function(){
+		document.getElementById("title").innerHTML="마우스오버";
+		theBtn.firstChild.src="images/btn_over.gif";
+		s.innerHTML=theBtn.firstChild.src;		
+}
+       
+//버튼위에 mouseout 되었을때(default상태), 추가적으로 버튼주소 추가하여 출력하기
+	theBtn.onmouseout = function(){
+		document.getElementById("title").innerHTML="마우스아웃";
+		theBtn.firstChild.src="images/btn_out.gif";
+		s.innerHTML=theBtn.firstChild.src;		
+}
+
+
+//]]>
+</script>
+</body>
+</html>

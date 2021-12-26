@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#int").click(function() {
+			msg();
+	
+		})	
+		$("#chan").click(function() {
+			change();
+		})	
+	});
+	function msg() {
+		var sex;
+		if($("#male:checked").val()=='on'&&$("#female:checked").val()=='on'){
+			sex='none';
+		}else if($("#male:checked").val()=='on'){
+			sex='남성';
+		}else if($("#female:checked").val()=='on'){
+			sex='여성';
+		}else{
+			sex='none';
+		}
+		var msg="이름: "+$("input[type=text]").val()+"\n성별: "+sex
+		+"\n소개: "+$("#intro").val()+"\n직업: "+$("option:selected").val();
+		alert(msg);
+	}
+	function change() {
+		var newn=prompt('변경할 이름을 입력하세요','');
+		$('#user').val(newn);
+	}
+	
+</script>
+<style>
+#intro {
+	width: 400px;
+	height: 60px;
+}
+button{
+margin:5px;
+}
+</style>
+</head>
+<body>
+<form action="#" method="get" name="f1" id="f1">
+<fieldset>
+<p><label>이름</label> <input type="text" id="user"></p>
+<p><label>남자</label> <input type="checkbox" id="male"><label>여자</label><input type="checkbox" id="female"></p>
+<p><label>소개</label> <textarea id="intro"></textarea></p>
+<p><label>직업</label> <select name="jobs" id="jobs">
+    <option value="programmer">프로그래머</option>
+    <option value="progamer">프로게이머</option>
+    <option value="none">백수</option>
+  </select></p>
+<button id="int">조사하기</button>
+<button id="chan">이름변경</button>
+</fieldset>
+</form>
+</body>
+</html>

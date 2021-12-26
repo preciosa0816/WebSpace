@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var price1 = prompt("교통비","0");
+		var price2 = prompt("식비","0");
+		var price3 = prompt("음료비","0");
+		var result = parseInt(price1) + parseInt(price2) + parseInt(price3);
+
+		if (result > 10000) {
+			var ex = result - 10000;
+			window.alert(ex+"원 초과")
+		} else {
+			window.alert("돈관리 잘했어요")
+		}
+	</script>
+</body>
+</html>

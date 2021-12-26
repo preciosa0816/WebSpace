@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+body {
+	background-color: lightyellow;
+}
+
+#m_box {
+	width: 100px;
+	height: 60px;
+	border: 1px solid blue;
+}
+
+#s_box {
+	width: 80px;
+	height: 40px;
+	border: 1px solid red;
+}
+
+.box {
+	background-color: blue;
+}
+
+div {	
+	display:inline-block;
+}
+
+/* div { */
+
+/*   width: 100px; */
+/*   border: 5px solid blue; */
+/*   padding: 70px; */
+/*   display: block; */
+
+/* } */
+/* div.box{ */
+/* 	border: 3px solid red; */
+/* 	background-color: blue; */
+/* 	 padding: 50px; */
+
+/* } */
+</style>
+</head>
+<body>
+	<div id="m_box"></div>
+	<div id="s_box" class="box"></div>
+</body>
+</html>

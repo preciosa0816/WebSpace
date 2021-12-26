@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//$(요소선택).append(새요소)
+		//$(new).appendTo(old) :선택요소의 마지막위치에 새요소 생성/추가
+		$("<li>appendTo</li>").appendTo("#listZone");
+		
+		//$(old).prepend(new)
+		//$(new).prependTo(old):선택요소의 맨 앞에 새요소 생성/추가
+		$("#listZone").prepend("<li>prepend</li>");
+	
+	});
+</script>
+</head>
+<body>
+<ul id="listZone">
+	<li>리스트</li>
+</ul>
+</body>
+</html>

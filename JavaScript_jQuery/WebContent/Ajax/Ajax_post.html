@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax::post()</title>
+<script src="../jQuery/js/jquery-3.4.1.js"></script>
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#submit").click(function() {
+			var username=$(".username").val();//홍길동
+			var sendData='username= '+username
+			$.post("welcome.jsp",sendData,function(msg){
+			$("#message").html(msg);
+		});
+		});
+		
+	});
+	
+</script>
+<style type="text/css">
+	td{border:1px solid gray;}
+</style>
+
+</head>
+<body>
+get::http://www.abc.com?username=홍길동&&id=abcd;<br>
+post::전송body안에 username=홍길동&&id=abcd => 보안유리
+<form>
+	<label>이름을 입력하세요</label>
+	<input type="text" name="username" class="username">
+	<input type="button" value="전송" id="submit">
+
+</form>
+<div id="message"></div>
+</body>
+</html>

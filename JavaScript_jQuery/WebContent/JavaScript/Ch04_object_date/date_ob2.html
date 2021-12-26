@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var t=new Date();
+	var nowYear=t.getFullYear();
+	
+	var theDate=new Date(nowYear,11,31); //올해연말에 대한 날짜정보 객체
+	var diffDate=theDate-t;
+	
+	document.write(theDate,"<br>");
+	document.write(t,"<br>");
+	var result=Math.ceil(diffDate/(60*1000*60*24));
+	document.write("연말 D-day : "+result+"일 남았습니다.","<br>")
+	
+	var diffDateTime=theDate.getTime()-t.getTime();
+	var result=Math.ceil(diffDateTime/(60*1000*60*24));
+	document.write(theDate.getTime(),"<br>");
+	document.write(t.getTime(),"<br>");
+	document.write(diffDateTime,"<br>");
+	document.write("연말 D-day : "+result+"일 남았습니다.")
+
+</script>
+
+</body>
+</html>

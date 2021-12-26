@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	//배열은 홍길동1~4
+	//이름을 입력받기
+	//배열안에 이름을 혹인 해서 판단하기(찾았는지)
+	var arr = ["홍길동1","홍길동2","홍길동3","홍길동4"];
+	var name = prompt("이름을 입력하세요","");
+	for(var i =0;i<arr.length;i++){
+		if(name==arr[i])
+			document.write(name+"은 arr["+i+"]와 일치합니다.","<br>");
+			
+		else
+			document.write(name+"은 arr["+i+"]와 일치하지 않습니다.","<br>");
+	};
+	
+	for(var i =0;i<arr.length;i++){
+		if(name==arr[i]){
+			document.write(name+"을 찾았습니다.","<br>");
+			break;}
+		else if(i==arr.length-1)
+			document.write(name+"은 존재하지 않습니다.","<br>");
+	};
+</script>
+
+</body>
+</html>

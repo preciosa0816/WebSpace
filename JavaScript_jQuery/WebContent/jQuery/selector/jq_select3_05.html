@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var result_1=$("#chk1").prop("checked");// id값이 chk1인 요소가 체그된 상태이면 true반환하여 result_1에 저장
+		console.log(result_1);//false
+		
+		var result_2=$("#chk2").prop("checked");
+		console.log(result_2);//true
+		
+		var result_2=$("#chk3").prop("checked",true);//id값이 chk3인 요소의 체크상태를 true로 바꾼다
+		
+		var result_3=$("#se_1").prop("selectedIndex");//id 값이 se_1인 요소의 옵션중 selected옵션의 인덱스값 가져옴
+		console.log(result_3);//2
+	
+		
+	});
+</script>
+
+</head>
+<body>
+	<h1><strong>객체 조작 및 생성</strong></h1>
+	<form aciton="#" id="form_1">
+		<p>
+			<input type="checkbox" name=chk1" id="chk1"><label for="chk1">chk1</label>
+			<input type="checkbox" name=chk2" id="chk2" checked><label for="chk2">chk2</label>
+			<input type="checkbox" name=chk3" id="chk3"><label for="chk3">chk3</label>
+		</p>
+		<p>
+			<select name="se_1" id="se_1">
+				<option value="opt1">option1</option>
+				<option value="opt2">option2</option>
+				<option value="opt3" selected>option3</option>
+			</select>
+		</p>
+	</form>
+</body>
+</html>

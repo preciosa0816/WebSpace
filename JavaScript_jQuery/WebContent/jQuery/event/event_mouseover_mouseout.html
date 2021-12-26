@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//mouseover()
+		$("#btn1").mouseover(function(){
+			$('p').css("background","lightgreen");
+		});
+		$("#btn1").on('mouseover',function(){
+			$('p').css("background","lightgreen");
+		});
+		//강제적 이벤트 발생
+		$("#btn1").mouseover();
+		
+		//mouseout()
+		$("#btn1").mouseout(function(){
+			$('p').css("background","purple");
+		});
+		$("#btn1").on('mouseout',function(){
+			$('p').css("background","purple");
+		});
+		//강제적 이벤트 발생
+		$("#btn1").mouseout();
+		//마우스 영역으로 들어갔을 때, 벗어났을떄 각각동작(이벤트)
+		$("#btn2").hover(function() {
+			$('p').css("background","pink");
+		},function() {
+			$('p').css("background","aqua");
+		
+		});
+		
+	});
+</script>
+</head>
+<body>
+<button id="btn1">mouseover/mouseout</button>
+<button id="btn2">hover</button>
+<p>내용(배경색)</p>
+</body>
+</html>

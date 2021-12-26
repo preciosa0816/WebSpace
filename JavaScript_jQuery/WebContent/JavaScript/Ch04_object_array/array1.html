@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+ 	<!-- 	방법1 -->
+	var arr =[30,"따릉이",true];
+
+ 	<!-- 	방법2 -->	
+	var arr2=new Array(30,"따릉이",true);
+	
+ 	<!-- 	방법3 -->
+	var arr3=new Array();
+	arr3[0]=30;
+	arr3[1]="따릉이";
+	arr3[2]=true;
+	
+	document.write(arr[0],"<br>");
+	document.write(arr[1],"<br>");
+	document.write(arr[2],"<br>");
+	
+	//일반 for문
+	for(var i=0; i<arr.length;i++){
+		document.write(arr[i],"<br>")
+	}
+	
+	//고급 for문
+	for(i in arr){
+		document.write(arr[i],"<br>")
+	}
+	
+	
+</script>
+</body>
+</html>

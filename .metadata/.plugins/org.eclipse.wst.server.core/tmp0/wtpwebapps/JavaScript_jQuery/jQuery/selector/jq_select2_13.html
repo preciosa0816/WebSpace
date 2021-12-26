@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//$("요소선택:contains(텍스트))"):선택한 요소 중 텍스틀르 포함하는 요소만 선택
+		$("#inner_1 p:contains(내용1)").css({"background" : "lightpink"});
+		
+		//$("요소선택:has(요소명))")/$("요소선택").has("요소명"):선택한 요소중 요소명을 포함하는 요소만 선택
+		$("#inner_1 p:has(strong)").css({"background" : "lightgreen"});
+		
+		//$("요소선택").contents(): 선택한 요소의 하위요소 텍스트와 태그 노드 선택
+		$("#outer_wrap").contents().css({"border" : "1px dashed red"});
+		
+		//$("요소선택:not(제외할 요소 선택))")/$("요소 선택").not(제외할 요소 선택) : 선택할 요소중 제외할 요소 빼고 선택
+		$("#inner_2 p").not(":first").css({"background" : "aqua"});
+		
+		//$("요소선택").탐색선택자().end() :필터링이 실행되기 이전의 요소 선택(#inner_2 p)
+		$("#inner_2 p").eq(2).end().css({"color" : "magenta"});
+		
+		//$("요소선택").find("하위 요소 중 필터링할 요소 선택")
+		$("#inner_1").find(".txt1").css({"background" : "violet"});
+		
+		//$("요소선택").filter("선택한 요소 중 필터링할 요소 선택")
+		$("#inner_1 p").filter(".txt2").css({"background" : "orange"});
+		
+		//innter_2중 짝수는 노랑배경
+		$("#inner_2 p").filter(function(idx,obj){
+			console.log(idx); return idx%2==0;
+		}).css({"background":"yellow"})
+	});
+</script>
+</head>
+<body>
+	<div id="outer_wrap">
+		<h1>콘텐츠 탐색 선택자</h1>
+		<section id="inner_1">
+		<h1>contains(),contents(),has()</h1>
+		<p>
+			<span>내용1</span>
+		</p>
+		<p>
+			<strong>내용2</strong>
+		</p>
+		<p>
+			<span>내용3</span>
+		</p>
+		<p class="txt1">내용1-1	</p>
+		<p class="txt2">내용2	-1</p>
+		<p class="txt2">내용2	-1</p>
+		<p class="txt1">내용2	-1</p>
+		
+		</section>
+		<section id="inner_2">
+			<h1>not(), end()</h1>
+			<p>내용4</p>
+			<p>내용5</p>
+			<p>내용6</p>
+			<p>내용7</p>
+			<p>내용8</p>
+			<p>내용9</p>
+		</section>
+	</div>
+</body>
+</html>

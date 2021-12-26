@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$("#sub").click(function() {
+			if($("#correct").val()!='correct'){
+				$("p").text("Not valid!").css("color","red");
+			}else{
+				$("p").text("Validated...").css("color","red");
+				alert("success!");
+				
+			}
+		})
+	});
+
+</script>
+<style type="text/css">
+input{
+margin-left:5px;
+margin-right:5px;
+
+}
+h4{
+color:blue;
+}
+</style>
+</head>
+<body>
+<h4>Type'correct' to validate</h4>
+<input type="text" name="correct" id="correct"><input type="submit"name="sub" id="sub">
+<p></p>
+</body>
+</html>

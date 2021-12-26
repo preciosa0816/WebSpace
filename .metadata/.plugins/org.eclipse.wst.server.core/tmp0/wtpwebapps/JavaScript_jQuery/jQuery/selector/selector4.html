@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#btnReg').click(function() {
+		return checkItem();
+	})
+});
+
+function checkItem() {
+		
+	
+		if($('#id').val()==''){
+			alert('아이디를 입력해주세요');
+			$('#id').focus();
+			return false;
+		}else if($('#pw').val()==''){
+			alert('비밀번호를 입력해주세요');
+			$('#pw').focus();
+			return false;
+		}else if($('#pw').val()!=$('#pw2').val()){
+			alert('비밀번호를 확인해주세요');
+			$('#pw2').focus();
+			return false;
+		}else{
+			alert('회원가입 성공!');
+		}
+}
+</script>
+</head>
+<body>
+<form action='#' method='post'>
+	아이디: <input type="text" name='id' id='id'><br>
+	비밀번호: <input type='password' name='pw' id='pw'><br>
+	비밀번호확인: <input type='password' name='pw2' id='pw2'><br>
+	<input type='submit' value='전송' name='btnReg' id='btnReg'>
+</form>
+</body>
+</html>

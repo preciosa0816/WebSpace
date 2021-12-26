@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var obj = [ {
+			"area" : "서울"
+		}, {
+			"area" : "부산"
+		}, {
+			"area" : "전주"
+		} ]
+		//배열에 저장된 요소의 개수만큼 메서드를 반복실행. 
+		//메서드를 실행할 때마다 매개변수1, 매개변수2에는 배열에 저장된 요소와 인덱스 값이 배열에 오름차순으로 대입
+		$(obj).each(function(i, o) {			
+			console.log(i + ":", o);
+		});
+		console.log("====The End1====");
+		//배열에 저장된 요소의 개수만큼 메서드를 반복실행. 
+		//메서드를 실행할 때마다 매개변수1, 매개변수2에는 배열에 저장된 요소와 인덱스 값이 배열에 오름차순으로 대입
+		$.each($("#menu2 li"), function(i, o) {
+			console.log(i + ":", o);
+		});
+		console.log("====The End2====");
+		//배열에 저장된 요소의 개수만큼 메서드 반복실행. 메서드 실행할떄마다 $(this)에는 배열에 저장된 요소가 오름차순으로 대입
+		$.each($("#menu2 li"), function(i) {
+			console.log(i + ":", $(this));
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id='menu1'>
+		<li>내용1-1</li>
+		<li>내용1-2</li>
+		<li>내용1-3</li>
+		<li>내용1-4</li>
+	</ul>
+	<ul id='menu2'>
+		<li>내용2-1</li>
+		<li>내용2-2</li>
+		<li>내용2-3</li>
+		<li>내용2-4</li>
+	</ul>
+
+</body>
+</html>

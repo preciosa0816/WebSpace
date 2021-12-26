@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>win_open.html</title>
+
+</head>
+<body>
+<p>버튼을 누르면 새로운 창이 열립니다.</p>
+<form>
+<input type="button" value="새로운 창 열기" onclick="win('open')"><br><br>
+<input type="button" value="새로운 창 닫기" onclick="win('close')">
+</form>
+<script>
+var win_obj=null;
+
+function win(my_select) {
+	switch(my_select){
+	case "open": win_obj=window.open("list.html","pop1","width=300,height=400,left=300,top=50,scrollbars=yes, toolbars=yes, location=no")	
+		break;
+	case "close": if(win_obj!=null) win_obj.close()
+		break;
+	}
+}
+
+</script>
+</body>
+</html>

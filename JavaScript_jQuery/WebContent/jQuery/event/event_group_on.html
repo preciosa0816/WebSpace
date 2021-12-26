@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+
+$(function () {
+	$("h1 a").on({
+		"mouseover focus" : function() {
+			$(this).css("color", "brown");
+		},
+		"mouseout blur" : function() {
+			$(this).css("color","green")
+		}
+	});
+	
+	$("h2").append("<a href ='#'>생성된 요소</a>");
+});
+	
+	
+	
+</script>
+</head>
+<body>
+	<h1>
+		<a href="#">버튼</a>
+	</h1>
+	<h2></h2>
+</body>
+</html>

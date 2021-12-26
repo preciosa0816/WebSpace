@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var result_1=$("#user_name").val(); //속성값 가져오기
+		console.log(result_1);//Young
+		
+		$("#user_id").val("javascript");//새 속성값 적용
+		
+		//$("요소선택").prop("defaultValue"):사용자가 value속성값을 바꿔도 초기의 value 속성값을 가져옴
+		var result_2=$("#user_id").prop("defaultValue");
+		console.log(result_2);//hello (초기 속성값 유지)
+		
+	});
+</script>
+
+</head>
+<body>
+	<h1>객체 조작 및 생성</h1>
+	<form aciton="#" id="form_1">
+		<p>
+			<label for="user_name">name</label>
+			<input type="text" name="user_name" id="user_name" value="Young">
+		</p>
+		<p>
+			<label for="user_id">ID</label>
+			<input type="text" name="user_id" id="user_id" value="hello">
+		</p>
+	</form>
+</body>
+</html>

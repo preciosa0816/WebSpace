@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chColor(){
+		var arrColor=["#ff0","#6c0","#fcf","#cf0","#39f"];
+		var arrNum=parseInt(Math.random()*5); //parseInt : 버림(내림) = math.floor
+		var bodyTag = document.getElementById("theBody");
+		bodyTag.style.backgroundColor=arrColor[arrNum];
+	}
+</script>
+</head>
+<body id="theBody">
+<button onclick="chColor()">배경 색상 바꾸기</button>
+
+</body>
+</html>

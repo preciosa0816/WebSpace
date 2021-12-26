@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	
+	
+	$(function() {
+		var style_1={"background-color":"pink","border":"2px solid navy"}
+		//.title 과 .txt6은 불포함
+		$(".txt3").prevUntil(".title").css(style_1); //$(".txt3").prevUntil(".title")=.title이후~.txt3까지
+		$(".txt3").nextUntil(".txt6").css(style_1); //$(".txt3").nextUntil(".txt6")=.txt3~.txt6이전까지
+	});
+</script>
+</head>
+<body>
+<h1>div 밖의  h1</h1>
+<div id="wrap">
+	<h1 class="title">인접 관계 선택자</h1>
+	<P>내용1</P>
+	<P>내용2</P>
+	<P class="txt3">내용3</P>
+	<P>내용4</P>
+	<P>내용5</P>
+	<P class="txt6">내용6</P>
+</div>
+</body>
+</html>

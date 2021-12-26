@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1 a').on("mouseover focus",function(){
+			$(this).css("background","yellow")
+		});
+		
+		//이벤트삭제를 먼저 해야지 동작하지 않음
+		$('button').on("click",function(){
+			$("h1 a").off();
+		});
+	});
+</script>
+</head>
+<body>
+off():: on()로 등록한 이벤트 제거
+unbind():: bind()로 설정된 정적요소이벤트 제거
+undelegate():: delegate()로 동적요소 이벤트 제거
+<h1><a href="#">내용</a></h1>
+<button>이벤트 삭제</button>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+div {
+  background-color: coral;
+  border: 1px solid;
+  padding: 50px;
+}
+</style>
+</head>
+<body>
+이벤트전파<br>
+<p>This example demonstrates the difference between bubbling and capturing when adding event listeners.</p>
+
+<div id="myDiv">
+  <p id="myP">Click this paragraph, I am Bubbling.<br>
+  	Bubbling:특정화면요소에서 이벤트가 발생했을 때 더 상위의 화면요소들로 전달되어가는 특성</p>
+</div><br>
+
+<div id="myDiv2">
+  <p id="myP2">Click this paragraph, I am Capturing.<br>
+  	Capturing:버블링과 반대 방향(body에서 시작해서 밑으로 이벤트가 내려가는 특성)</p>
+</div>
+
+<script>
+document.getElementById("myP").addEventListener("click", function() {
+  alert("You clicked the P element!-1");
+}, false); //false:default ,안에서 밖으로 전파 ;
+
+document.getElementById("myDiv").addEventListener("click", function() {
+  alert("You clicked the DIV element!-2");
+}, false);
+
+document.getElementById("myP2").addEventListener("click", function() {
+  alert("You clicked the P element!-3");
+}, true);//true: 밖에서 안으로 전파;
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+  alert("You clicked the DIV element!-4");
+}, true);
+</script>
+
+</body>
+</html>

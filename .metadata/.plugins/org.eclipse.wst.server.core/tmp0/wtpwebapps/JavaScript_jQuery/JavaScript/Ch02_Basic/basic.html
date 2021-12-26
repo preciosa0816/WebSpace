@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+	div{
+		width:100px;
+		height:100px;
+		border: 2px solid;
+		margin-bottom:20px;
+	}
+	#box1{
+		transition-duration:2s;
+	}
+</style>
+</head>
+<body>
+	<h1> CSS & JavaScript </h1>
+	<div id='box1'>CSS</div>
+	<div id='box2'>JavaScript</div>
+	<script>
+		var box1 = document.getElementById('box1');
+		var box2 = document.getElementById('box2');		
+			//JavaScript
+			box1.onclick = function() {
+				this.style.marginLeft='200px';
+			};
+			//jQuery
+			box2.onclick = function() {
+				$(this).animate({marginLeft:'200px'},2000);
+			};
+		
+	</script>
+	
+</body>
+</html>

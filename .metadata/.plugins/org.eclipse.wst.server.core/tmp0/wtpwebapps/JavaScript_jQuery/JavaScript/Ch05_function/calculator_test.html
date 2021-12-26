@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table{
+width:300px;
+height:400px;
+border:1px solid black;
+padding:10px;
+margin:10px;
+}
+td,tr{
+margin:30px;
+border:1px solid lightblue;
+height: 15px;
+width:20px;
+text-align:center;
+}
+td:hover { 
+  background-color: lightgrey;
+}
+td:active { 
+  background-color: grey;
+}
+
+#blue{
+text-align:right; 
+background-color:lightblue;
+height: 15px;
+}
+input{
+background-color: lightblue;
+border:none;
+font-size:15px;
+text-align:right;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<td colspan="5" id="blue"><input type="text" id="display"></td>
+</tr>
+<tr>
+<td onclick="add(1)">1</td>
+<td onclick="add(2)">2</td>
+<td onclick="add(3)">3</td>
+<td onclick="add(4)">4</td>
+<td onclick="add(5)">5</td>
+</tr>
+<tr>
+<td onclick="add(6)">6</td>
+<td onclick="add(7)">7</td>
+<td onclick="add(8)">8</td>
+<td onclick="add(9)">9</td>
+<td onclick="add(0)">0</td>
+</tr>
+<tr>
+<td onclick="add('/')">/</td>
+<td onclick="add('*')">*</td>
+<td onclick="add('-')">-</td>
+<td onclick="add('+')">+</td>
+<td onclick="calculate()">=</td>
+</tr>
+<tr>
+<td onclick="reset()">C</td> 
+</tr>
+</table>
+<script type="text/javascript">
+
+//isNaN : 숫자인지 아닌지 판별해주는 함수, 숫자이면 false 아니면 true 리턴
+//eval은 계산을 위한 함수로 우선순위까지 고려하여 계산함
+//eval 함수는 식이 아닌 문자열이 들어오면 오류가 발생- 해결하기
+var numberClicked=false; //처음에는 입력받은 것이 없으므로
+
+function add(char){
+	if(numberClicked==false){//이전에 입력 받은 값이 연산자인 경우
+		if(isNaN(char)==true) {//아무것도 실행 x			
+		}else{
+			var display=document.getElementById('display'); //식입력을 위한 input태그 불러오기
+			//display.value는 input태그 안에 들어있는 값
+			display.value+=char;
+		}
+	}else{//이전 입력값이 숫자인경우
+		var display=document.getElementById('display'); //식입력을 위한 input태그 불러오기
+		//display.value는 input태그 안에 들어있는 값
+		display.value+=char;
+	}
+	
+	if(isNaN(char)==true){ //char이 연산자라면
+		numberClicked=false;
+	}else{ //char이 숫자라면
+		numberClicked=true;
+	}
+	
+}
+
+function calculate(){
+	var display=document.getElementById('display');
+	display=eval(display.value);
+	document.getElementById('display').value=display;
+}
+function reset(){
+	document.getElementById('display').value="";
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

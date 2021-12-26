@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var score = [ 90, 55, 80, 60, 100 ];
+		var names = ["홍길동3",  "홍길동1", "홍길동2", "홍길동4" ];
+
+		//배열을 이름순으로 정리
+		document.write(names.sort(), '<br>');
+
+		//번호순으로 정렬
+		document.write(score.sort(function(a, b) {
+			return a - b;
+		}), '<br>');
+		
+		document.write(score.reverse()+ '<br>');
+		
+		//높은 번호순으로 정렬
+		document.write(score.sort(function(a, b) {
+			return b - a;
+		}), '<br>');
+		
+		
+	</script>
+</body>
+</html>

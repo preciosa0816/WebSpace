@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+	$(function() {
+		if($.cookie("popup")=="none"){ //쿠키("popup")의 값이 "none"이면 값이 notice_wrap인 요소를 숨긴다
+			$("#notice_wrap").hide();
+		}
+		
+		//체크박스의 체크 유무에 따라 쿠키를 생성하여 3일간 저장.
+		var $expChk=$("#expiresChk");
+		$(".closeBtn").on("click",closePop);
+		
+		function closePop() {
+			if($expChk.is(":checked")){
+				$.cookie("popup","none",{expires:3,path:"/"});
+			}
+			$("#notice_wrap").fadeOut("fast");
+		}
+	});
+
+</script>
+</head>
+<body>
+<div id="notice_wrap">
+	<img src="images/1.jpg" alt="beach">
+	<p class="closeWrap">
+		<input type="checkbox" name="expiresChk" id="expiresChk">
+		<label for="expiresChk">3일 동안 이 창 열지 않기</label>
+		<button class="closeBtn">닫기</button>
+	</p>
+</div>
+</body>
+</html>

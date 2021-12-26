@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	
+	
+	$(function() {
+		var style_1={"background-color":"pink","border":"2px solid navy"}
+		var style_2={"background-color":"ivory","border":"2px dashed navy"}
+		
+		$(".txt").prevAll().css(style_1); //$(".txt").prevAll()=<P class="txt">이전 모두
+		$(".txt").nextAll().css(style_2);//$(".txt").nextAll()=<P class="txt">이후모두
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<h1>인접 관계 선택자</h1>
+	<P>내용1</P>
+	<P class="txt">내용2</P>
+	<P>내용3</P>
+	<P>내용4</P>
+</div>
+</body>
+</html>

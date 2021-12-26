@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		//mouseout():완전히 벗어났을때와 하위요소에도 이벤트발생
+		$("#wrap1").mouseout(function(){
+			$('p').css("border","2px solid brown");
+		});
+		
+		//mouseleave():완전히 벗어났을때이벤트발생/하위요소에는영향x 
+		$("#wrap2").mouseleave(function() {
+			$('p').css("border","2px dashed navy");
+		
+		});
+		
+	});
+</script>
+</head>
+<body>
+<div id="wrap1">
+	<p>내용(배경색)</p>
+</div>
+<br>
+<div id="wrap2">
+	<p>내용(배경색)</p>
+</div>
+</body>
+</html>

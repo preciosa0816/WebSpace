@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+fieldset {
+	padding: 0 auto;
+	margin: 0 auto;
+}
+
+#calc {
+	width: 280px;
+}
+
+#calc input[type=button] {
+	width: 60px;
+	height: 60px;
+	font-family: "궁서체";
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	padding: 0;
+	margin: 0 0 5px 0;
+	border-color: #f2f2f2;
+	background-color: #ffffff;
+}
+
+#calc input[type=button]:hover {
+	background-color: #e6e6e6;
+}
+
+#calcdiv {
+	position: relative;
+	overflow: hidden;
+	width: 257px;
+	height: 255px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#win {
+	position: relative;
+	text-align: right;
+	width: 235px;
+	height: 60px;
+	font-size: 50px;
+	font-weight: bold;
+	font-family: "궁서체";
+	padding: 5px 10px 0 10px;
+	margin: 5px 0 10px 0;
+	background-color: #e6f2ff;
+}
+</style>
+<script type="text/javascript">
+	var num1 = "";
+	var num2 = "";
+	var calc1 = "";
+	var result = "";
+	
+	function winClear() {
+		num1 = "";
+		num2 = "";
+		calc1 = "";
+		document.getElementById("win").innerHTML = "0";
+	}
+
+	function winNum(number) {
+		if (calc1 == "") {
+			if (num1 == ""&&number=="0") {
+				num1 = "";
+				document.getElementById("win").innerHTML = "0";
+			} else {
+				num1 += number;
+				document.getElementById("win").innerHTML = num1 +""+ calc1;
+			}
+		} else {
+			if (num2 == ""&&number=="0") {
+				num2 = "";
+				document.getElementById("win").innerHTML = "0";
+			} else {
+				num2 += number;
+				document.getElementById("win").innerHTML = num2;
+			}
+		}
+	}
+	
+	function winCalc(calc) {
+		if (calc1 == ""||calc1 == "1") {
+			calc1 = calc;
+		} else {
+			if (calc1 == "di") {
+				num1 = Number(num1) / Number(num2);
+				num2 = ""
+				calc1 = "1";
+				document.getElementById("win").innerHTML = num1;
+			} else if (calc1 == "mu") {
+				num1 = Number(num1) * Number(num2);
+				num2 = "";
+				calc1 = "1";
+				document.getElementById("win").innerHTML = num1;
+			} else if (calc1 == "mi") {
+				num1 = Number(num1) - Number(num2);
+				num2 = "";
+				calc1 = "1";
+				document.getElementById("win").innerHTML = num1;
+			} else if (calc1 == "pl") {
+				num1 = Number(num1) + Number(num2);
+				num2 = "";
+				calc1 = "1";
+				document.getElementById("win").innerHTML = num1;
+			}
+		}
+	}
+	
+	function winOk() {
+		if (calc1 == "di") {
+			result = Number(num1) / Number(num2);
+			num1 = "";
+			num2 = "";
+			calc1 = "";
+			document.getElementById("win").innerHTML = result;
+		} else if (calc1 == "mu") {
+			result = Number(num1) * Number(num2);
+			num1 = "";
+			num2 = "";
+			calc1 = "";
+			document.getElementById("win").innerHTML = result;
+		} else if (calc1 == "mi") {
+			result = Number(num1) - Number(num2);
+			num1 = "";
+			num2 = "";
+			calc1 = "";
+			document.getElementById("win").innerHTML = result;
+		} else if (calc1 == "pl") {
+			result = Number(num1) + Number(num2);
+			num1 = "";
+			num2 = "";
+			calc1 = "";
+			document.getElementById("win").innerHTML = result;
+		}
+	}
+</script>
+</head>
+<body>
+	<form action="#" id="calc">
+		<fieldset>
+			<div id="win">
+				0
+			</div>
+			<div id="calcdiv">
+				<input type="button" value="7" onclick="winNum(7)">
+				<input type="button" value="8" onclick="winNum(8)">
+				<input type="button" value="9" onclick="winNum(9)">
+				<input type="button" value="/" onclick="winCalc('di')">
+				<input type="button" value="4" onclick="winNum(4)">
+				<input type="button" value="5" onclick="winNum(5)">
+				<input type="button" value="6" onclick="winNum(6)">
+				<input type="button" value="*" onclick="winCalc('mu')">
+				<input type="button" value="1" onclick="winNum(1)">
+				<input type="button" value="2" onclick="winNum(2)">
+				<input type="button" value="3" onclick="winNum(3)">
+				<input type="button" value="-" onclick="winCalc('mi')">
+				<input type="button" value="C" onclick="winClear()">
+				<input type="button" value="0" onclick="winNum(0)">
+				<input type="button" value="=" onclick="winOk()">
+				<input type="button" value="+" onclick="winCalc('pl')">
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

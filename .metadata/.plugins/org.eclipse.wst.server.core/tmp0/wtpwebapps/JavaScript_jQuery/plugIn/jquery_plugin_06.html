@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/jquery.bxslider.min.css">
+<link rel="stylesheet" href="css/jquery.bxslider.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script type="text/javascript">
+$(function() { 
+	$('.slide_gallery').bxSlider({
+		auto:true,
+		autoControls:false,
+		pagerCustom:'.slider-pager'
+	});
+	
+});
+</script>
+<style>
+.slider-pager{
+position:absolute;
+	align:center;
+}
+.slider-pager img{
+	width:50px;
+	height:50px;
+	align:center;
+}
+.slider-pager li {
+	list-style-type:none;
+	float:left;
+	margin:5px;
+	text-align:center;
+}
+#gallery_wrap{
+left:50%;}
+
+</style>
+</head>
+<body>
+<div id="gallery_wrap" align="center">
+	<ul class="slide_gallery">
+		<li><img src="images/1.jpg" alt="pic1"></li>
+		<li><img src="images/2.jpg" alt="pic2"></li>
+		<li><img src="images/3.jpg" alt="pic3"></li>
+		<li><img src="images/4.jpg" alt="pic4"></li>
+		<li><img src="images/5.jpg" alt="pic5"></li>
+	</ul>
+	</div>
+	<div id="pager_wrap" align="center">
+	<ul class="slider-pager">
+		<li><a href="#" data-slide-index="0">
+		<img src="images/1.jpg" alt="pic1"></a>
+		</li>
+		<li><a href="#" data-slide-index="1">
+		<img src="images/2.jpg" alt="pic2"></a>
+		</li>
+		<li><a href="#" data-slide-index="2">
+		<img src="images/3.jpg" alt="pic3"></a>
+		</li>
+		<li><a href="#" data-slide-index="3">
+		<img src="images/4.jpg" alt="pic4"></a>
+		</li>
+		<li><a href="#" data-slide-index="4">
+		<img src="images/5.jpg" alt="pic5"></a>
+		</li>
+	</ul>
+	</div>
+
+</body>
+</html>

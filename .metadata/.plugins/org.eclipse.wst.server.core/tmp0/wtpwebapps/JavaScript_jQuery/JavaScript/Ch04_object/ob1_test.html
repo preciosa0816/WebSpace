@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//객체 생성방법1
+	var tv = new Object();
+	tv.color="white";
+	tv.price=300000;
+	tv.info=function(){
+		document.write("tv 색상 : "+this.color,"<br>");
+		document.write("tv 가격 : "+this.price,"<br>");
+	}
+	//객체 생성방법2
+	//var car=[]; //배열
+	//var car={}; //객체
+	var car={
+		color:"black",
+		price:5000000,
+		info:function(){
+			document.write("car색상 : "+this.color,"<br>");
+			document.write("car가격 : "+this.price,"<br>");
+			}				
+	};
+	
+	document.write("<h1>tv객체 메서드 호출</h1>");
+	tv.info();
+	document.write("<h1>car객체 메서드 호출</h1>");
+	car.info();
+</script>
+
+</body>
+</html>

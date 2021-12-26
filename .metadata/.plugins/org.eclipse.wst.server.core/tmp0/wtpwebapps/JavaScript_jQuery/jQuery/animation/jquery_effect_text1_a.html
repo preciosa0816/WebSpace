@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+		$("#btn").on("click", function() {
+			$("h1").fadeOut(1000, "swing");
+
+		});
+
+	});
+</script>
+</head>
+<body>
+	<button id="btn">Button</button>
+	<h1>content...</h1>
+</body>
+</html>

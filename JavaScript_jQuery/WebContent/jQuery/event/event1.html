@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.reverse{
+		background: green;
+		color:ivory;
+	}
+</style>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">	
+	$(document).ready(function() {
+	//event1
+		$('h1').on('click',function(){
+			$(this).html(function(index,html) {
+				return html+'+';
+			});
+		});
+	//event2
+		$('h1').on({"mouseenter":function(){
+			$(this).addClass('reverse');},
+					"mouseleave":function(){
+			$(this).removeClass('reverse');}
+		});
+	});
+</script>
+</head>
+<body>
+h1에 글자를 누르면 이벤트가 발생해서 "+"가 오른쪽에 표시되게하기<br>
+<h1>Header-0</h1>
+<h1>Header-1</h1>
+<h1>Header-2</h1>
+</body>
+</html>

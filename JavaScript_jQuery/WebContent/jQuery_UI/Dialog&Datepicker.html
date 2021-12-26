@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQery Dialog&Datepicker</title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+
+				$("#dialog").dialog(
+						{
+							resizable : false,
+							height : "auto",
+							width : 400,
+							modal : true,
+							buttons : {
+								"submit" : function() {
+									$(this).dialog("close");
+									$("#result").html(
+											$("#sch").val() + " : "
+													+ $("#datepicker").val());
+
+								},
+								"reset" : function() {
+									$("#sch").val("");
+									$("#datepicker").val("");
+								},
+								Cancel : function() {
+									$(this).dialog("close");
+								}
+							}
+						});
+
+				//	$( "#dialog" ).dialog();
+				$.datepicker.setDefaults({
+					dateFormat:"yy년 mm월 dd일"
+				});
+				
+				$("#datepicker").datepicker({
+					numberOfMonths : 3,
+					showButtonPanel : true
+				});
+
+				// 	$("#submit").click(function() {
+				// 		var sch= $("#sch").val();
+				// 		var date= $("#datepicker").val();
+				// 		$("#res").html(sch+":"+date);	
+
+				// 	});
+				// 	$("#reset").click(function() {
+				// 		$("#sch").val("");
+				// 	 	$("#datepicker").val("");
+
+				// 	});
+				// 	$("#cancle").click(function() {
+				// 		alert("취소되었습니다.")		
+				// 	});
+			});
+	// $( function() {
+
+	//   });
+</script>
+<style type="text/css">
+#head {
+	text-align: center;
+	border-bottom: 1px solid gray;
+	padding: 0;
+}
+
+#win {
+	margin-top: 50px;
+	padding: 10px;
+	width: 400px;
+	height: 300px;
+}
+
+input {
+	width: 200px;
+}
+
+#result {
+	text-align: center;
+	font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+	<div id="dialog" title="Basic dialog">
+
+		<h1>Hello jQery UI..!</h1>
+		<form action="#">
+			<label>일정 이름</label><br>
+			<input type="text" id="sch" name="sch" autocomplete="off"><br>
+			<br> <label>날짜</label><br>
+			<input type="text" id="datepicker" autocomplete="off"><br>
+			<br>
+		</form>
+	</div>
+
+
+	<div id="head">
+		<h2>일정생성</h2>
+	</div>
+	<div id="result">
+		<span id="res"></span>
+	</div>
+
+</body>
+</html>

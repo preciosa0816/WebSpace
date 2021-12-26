@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#btn").on("click", function() {
+			$("#ctx").animate({marginLeft:"+=50px"},500);
+		});
+
+	});
+</script>
+<style type="text/css">
+*{margin:0; padding:0;}
+#ctx{width:50px; height:50px; background:yellow;}
+</style>
+</head>
+<body>
+	<button id="btn">Button</button>
+	<p id="ctx">Content...</p>
+</body>
+</html>

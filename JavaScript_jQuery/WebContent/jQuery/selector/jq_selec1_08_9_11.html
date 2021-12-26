@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {//$("#wrap h1"):#wrap이 포함하는 모든 <h1>요소를 선택
+		$("#wrap h1").css({"background-color":"yellow","border":"2px dashed #f00"});
+	});
+	
+	$(function() {//$("#wrap> h2"):지정자식요소만 선택(1개선택됨)
+		$("#wrap> h2").css("border","2px dashed brown").css("color","blue");
+	});
+	
+	$(function() {//$("#wrap> section").children():선택 요소를 기준으로 모든 자식 요소 선택
+		$("#wrap> section").children().css({"background-color":"lightgreen","border":"2px solid purple"});
+	});
+	
+	$(function() {
+		var style_1={"background-color":"pink","border":"2px solid navy"}
+		var style_2={"background-color":"ivory","border":"2px dashed navy"}
+		
+		$(".txt").prev().css(style_1); //$(".txt").prev()=<P class="txt">바로전
+		$(".txt+p").css(style_2);//$(".txt+p")=<P class="txt">바로 후
+		$(".txt").next().next().css(style_2);//$(".txt+p")=<P class="txt">1,2단계이후
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<h1>인접 관계 선택자</h1>
+	<h2>인접 관계 선택자2</h2>
+	<P>내용1</P>
+	<P class="txt">내용2</P>
+	<P>내용3</P>
+	<P>내용4</P>
+	<h1>인접관계선택자</h1>
+	<section>
+		<h1>하위 요소 선택자</h1>
+		<h2>하위 요소 선택자2</h2>
+		<p>내용2</p>
+	</section>
+	<h1>인접관계선택자</h1>
+</div>
+</body>
+</html>

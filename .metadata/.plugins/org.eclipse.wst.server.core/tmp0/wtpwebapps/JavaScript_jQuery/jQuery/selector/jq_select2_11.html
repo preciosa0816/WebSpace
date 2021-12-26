@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	//$("요소 선택[속성]"):선택한 요소 중 지정한 속성이 포함된 요소만 선택
+	$("#wrap a[target]").css({"color":"pink"});
+	//$("요소 선택[속성^값]"):선택한 요소 중 속성값이 명시한 값으로 시작하는 요소만 선택
+	$("#wrap a[href^=https]").css({"color":"green"});
+	//$("요소 선택[속성$값]"):선택한 요소 중 속성값이 명시한 값으로 끝나는 요소만 선택
+	$("#wrap a[href$=net]").css({"color":"red"});
+	//$("요소 선택[속성*값]"):선택한 요소 중 속성값이 명시한 값을 포함하는 요소만 선택
+	$("#wrap a[href*=google]").css({"color":"magenta"});
+	
+	//$(":type 속성값"):input요소중 type 속성값이 일치하는 요소만 선택
+	$("#member_f:text").css({"background-color":"orange"});
+	//$(":type 속성값"):input요소중 type 속성값이 일치하는 요소만 선택
+	$("#member_f:password").css({"background-color":"lightpink"});
+	
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<p>
+	<a href="https://easyspub.co.kr" target="_blank">EasysPub</a>
+	</p>
+	<p>
+	<a href="https://naver.com" target="_blank">Naver</a>
+	</p>
+	<p>
+	<a href="https://google.co.kr" target="_blank">Google</a>
+	</p>
+	<p>
+	<a href="https://daum.net" target="_blank">Daum</a>
+	</p>
+</div>
+<form action="#" method="get" id="member_f">
+<p>
+<label for="user_id">아이디</label><input type="text" name="user_id" id="user_id">
+</p>
+<p>
+<label for="user_pw">비밀번호</label><input type="password" name="user_px" id="user_px">
+</p>
+</form>
+
+</body>
+</html>

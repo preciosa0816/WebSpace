@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("input[name='hobby']:checkbox").click(function() {
+			var checkList="";
+			var checkedConsole="";
+			$("input[name='hobby']:checkbox:checked").each(function() {		
+				checkList+= $(this).prev().text()+"<br>";
+				checkedConsole+=$(this).prev().text()+"\t";
+			});
+			
+			$("#contents").html(checkList);
+			alert(checkedConsole);
+			
+		});
+	});
+</script>
+</head>
+<body>
+<span>음악감상</span>
+<input type="checkbox" name="hobby" value="music"><br>
+<span>축구</span>
+<input type="checkbox" name="hobby" value="soccer"><br>
+<span>기타</span>
+<input type="checkbox" name="hobby" value="guitar"><br>
+<div id="contents"></div>
+</body>
+</html>

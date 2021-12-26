@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax.ajx()를 이용한 서버데이터 삽입</title>
+<script src="../jQuery/js/jquery-3.4.1.js"></script>
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#menu1").click(function(){
+			$.ajax({ //최초의 한번 이후에는 있는 정보를 사용 (없을때만 서버방문)
+				url:"menu.html",
+				datatype:"html",
+				success:function(data){
+					$("#message1").html(data);
+				}
+			});
+			return false;
+		});	
+		$("#menu2").click(function(){
+			$.ajax({ //최초의 한번 이후에는 있는 정보를 사용 (없을때만 서버방문)
+				url:"menu.html",
+				datatype:"html",
+				success:function(data){
+					$("#message2").html($(data).find('li'));
+				}
+			});
+			return false;
+		});
+	});			
+</script>
+<style type="text/css">
+div{
+	width:180px; height:80px; margin:3px;
+	float:left;
+}
+</style>
+</head>
+<body>
+<div>
+	<a href="#" id="menu1">메뉴보기1</a>
+	<span id="message1"></span>	
+</div>
+<div>
+	<a href="#" id="menu2">메뉴보기2</a>
+	<span id="message2"></span>
+</div>
+</body>
+</html>

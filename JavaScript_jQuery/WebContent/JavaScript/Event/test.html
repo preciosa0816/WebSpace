@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="checkbox">
+    <label>
+        <input type="checkbox"> Don't show this again!
+    </label>
+</div>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<script type="text/javascript">
+function localStorageAvailable() {
+    if (typeof(Storage) !== "undefined") {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+$('#checkbox').click(function(){
+    if ($('#checkbox').attr('checked')) {
+        if (localStorageAvailable())
+            localStorage.DoNotShowMessageAgain = "true";
+    }
+}) 
+if (localStorageAvailable()) {
+    if (localStorage.DoNotShowMessageAgain && localStorage.DoNotShowMessageAgain === "true") {
+        // user doesn't want to see the message again, so handle accordingly
+    }
+};
+
+</script>
+
+</body>
+</html>

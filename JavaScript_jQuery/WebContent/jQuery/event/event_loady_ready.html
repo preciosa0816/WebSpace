@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>load() & ready() Event</title>
+<script src="../js/jquery-2.1.4.js"></script>
+<!-- <script src="../js/jquery-3.4.1.js"></script> -->
+<!-- <script src="../js/jquery-migrate-1.4.1.min.js"></script> -->
+</head>
+<body>
+	<div id="wrap"></div>
+	<iframe src="http://www.nate.com" width="300" height="200"></iframe>
+	<script type="text/javascript">
+	//load():src에 연동이 되어있는 image, frame(site frame)가 로드가 완료된 후 함수가 실행됨
+// 		$(window).load(function() {
+// 			$("#wrap").append("<p>load complete</p>");
+// 		})
+		$("iframe").load(function() {
+			$("#wrap").append("<p>load complete</p>");
+		})
+		
+	//ready():html 문서 객체가 로딩이 완료된 후에 함수가 실행
+		$(document).ready(function() {
+			$("#wrap").append("<p>ready complete</p>");
+			
+		})
+	</script>
+onload::모든 컨텐츠(images,script,css,etc)가 로드된 후에 이벤트 발생<br>
+window.onload=function(){}<br>
+</body>
+</html>

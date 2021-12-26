@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var addNum=0;
+var subNum=1000;
+
+var auto=setInterval("console.log(addNum++);",3000);
+
+var auto_1=setInterval(function(){
+	addNum++;
+	console.log("addNum : "+addNum);
+},3000);
+
+var auto_2=setInterval(function(){
+	subNum--;
+	console.log("subNum : "+subNum);
+},3000);
+
+var i=100; 
+var auto_3=setTimeout(function() {
+	i++;
+	console.log(i);
+},5000);
+</script>
+
+<h1>일정 시간 간격으로 값 증감시키기</h1>
+<p>콘솔 패널을 열어 확인하세요
+<button onclick ="clearInterval(auto)">정지버튼</button>
+<button onclick ="clearInterval(auto_1)">증가정지</button>
+<button onclick ="clearInterval(auto_2)">감소정지</button>
+</body>
+</html>

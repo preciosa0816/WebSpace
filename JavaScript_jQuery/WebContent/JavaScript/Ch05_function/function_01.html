@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var count=0;
+
+myFnc(); //일반함수는 위치와 상관없이 호출 가능(hoisting)
+theFnc(); //익명함수 : 반드시 함수정의 먼저 이루어지고 호출해야 가능(hoisting 적용 x)
+
+//일반함수
+function myFnc() {
+	count++;
+	document.write("hello"+count,"<br>");
+}
+
+//익명함수
+var theFnc=function() {
+	count++;
+	document.write("bye"+count,"<br>");
+}
+//1.정상출력
+// myFnc();
+// theFnc();
+
+</script>
+</body>
+</html>

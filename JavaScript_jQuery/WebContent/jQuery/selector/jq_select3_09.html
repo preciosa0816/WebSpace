@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//선택한 요소 다음에 새요소 설정
+		$("#wrap p:eq(2)").after("<p>After</p>");
+		$("<p>insertAfter</p>").insertAfter("#wrap p:eq(1)");
+		
+		$("#wrap p:eq(1)").before("<p>Before</p>");
+		$("<p>insertBefore</p>").insertBefore("#wrap p:eq(0)");
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+<p>내용1</p>
+<p>내용2</p>
+<p>내용3</p>
+</div>
+</body>
+</html>

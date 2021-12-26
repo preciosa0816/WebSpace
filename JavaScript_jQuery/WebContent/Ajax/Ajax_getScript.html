@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스크립트 로드하기</title>
+<script src="../jQuery/js/jquery-3.4.1.js"></script>
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $.getScript("test.js");
+    $('#submit').click(function() {
+    	//var msg=call($('.username').val());
+    	var msg=call(${username});
+    	$('#message').html(msg);
+    	 return false;
+    });
+  });
+</script>
+</head>
+<body>
+  <form>  
+    <label> 이름을 입력하세요 : </label>  
+    <input type="text" name="username" class="username"/>  <br/>
+    <input type="button" id="submit" value="전송"/>
+    <div id="message"></div> 
+  </form>  
+</body>
+</html>

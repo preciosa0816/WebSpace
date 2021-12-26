@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$('h1 a').bind("mouseover focus",function(){
+			$(this).css("background","yellow");
+		});
+	});
+</script>
+</head>
+<body>
+bind():선택한 요소에 이벤트 등록, 동적요소 생성불가<br>
+<h1><a href='#'>정적인 요소</a></h1> 
+</body>
+</html>

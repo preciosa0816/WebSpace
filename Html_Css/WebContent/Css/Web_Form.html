@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+p.ex4 {
+	outline: thick ridge lightgreen;
+}
+
+body {
+	border: 5px solid lightgreen;
+	border-top: 5px solid gray;
+	background-color: #fff;
+	padding: 10px;
+
+}
+
+ul, li {
+	list-style-type: none;
+	margin: 15px 0;
+}
+
+form fieldset {
+	margin-bottom: 25px;
+}
+
+form legend {
+	font-weight: bold;
+}
+
+form label.reg {
+	width: 110px;
+	font-size: 14px; color : green;
+	font-weight: bold;
+	font-family: 굴림;
+	float: left;
+	text-align: right;
+	margin-right: 10px;
+	color: green;
+}
+
+select.color {
+	padding: 5px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+	<form action="/action_page.php">
+
+		<h1>여름방학 특강 신청</h1>
+		<fieldset>
+			<legend>수강 신청인</legend>
+			<ul>
+				<li><label>학번 </label><input type="text" name="name"> <label>이름
+				</label><input type="text" name="name"></li>
+			</ul>
+
+			<ul>
+				<li><label>학과</label> <select name="cars">
+						<optgroup label="-- 공과대학 --"> 
+						<option value="arc" selected>건축공학과</option>
+						<option value="mec">기계공학과</option>
+						<option value="ind">산업공학과</option>
+						<option value="ele">전기전자공학과</option>
+						<option value="com">컴퓨터공학과</option>
+						<option value="che">화학공학과</option>
+						</optgroup>
+						<optgroup label="-- 인문대학 --">
+						<option value="his">사학과</option>
+						<option value="lan">어문학부</option>
+						<option value="phi">철학</option>
+						</optgroup>
+						
+				</select></li>
+				<li></li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>수강 과목을 선택하세요</legend>
+			<ul>
+				<li><label class="reg" for="color";>선호색상</label> 
+				<input list="color" name="color" type="color">
+				<datalist id="color">
+<!-- 						<option  value="red">빨강</option> -->
+<!-- 						<option value="yellow">노랑</option> -->
+<!-- 						<option value="lightpink">분홍</option> -->
+<!-- 						<option value="blue">파랑</option> -->
+<!-- 						<option value="green">초록</option> -->
+				</datalist>
+
+				</li>
+				<li><label class="reg">신청과목(회화)</label> 
+				<input type="radio" name="subject" value="b" checked> 영어 회화(초급) 
+					<input type="radio" name="subject" value="i"> 영어 회화(중급) 
+					<input type="radio" name="subject" value="m"> OPIC</li>
+				<li><label class="reg">신청 과목(자격)</label> 
+				<input type="radio" name="qual" value="toeic"> TOEIC 
+				<input type="radio" name="qual" value="toefl"> TOEFL 
+				<input type="radio" name="qual" value="opic"> OPIC</li>
+				<li><label class="reg">관심분야 </label>
+				<input list="subject" name="subject">
+				<datalist id="subject">
+						<option value="Grammer">문법</option>
+						<option value="Reading">독해</option>
+						<option value="Speaking">말하기</option>
+						<option value="Listening">듣기</option>
+			</datalist></li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>강의 시간을 선택하세요</legend>
+			<ul>
+				<li><label class="reg">개강 주</label><input type="week"
+					name="year_week"></li>
+				<li><label class="reg">강의시간</label><input type="time"
+					name="usr_time"></li>
+			</ul>
+		</fieldset>
+
+		<fieldset>
+			<legend>학생증 사본 업로드</legend>
+
+			학생증사본 <input type="file" name="img" multiple> 
+		</fieldset>
+
+
+
+
+
+	</form>
+</body>
+</html>

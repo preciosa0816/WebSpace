@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chColor(obj,state) {
+		var myColor;
+		if(state=='over') {
+			myColor="green";
+		}else{
+			myColor="red";
+		}
+		obj.style.color=myColor;
+	}
+</script>
+</head>
+<body>
+<!-- 여기서 this는 mouseover/mouseout event가 발생한 button -->
+<button onmouseover="chColor(this,'over')" 
+		onmouseout="chColor(this,'out')">마우스 아웃</button>
+</body>
+</html>

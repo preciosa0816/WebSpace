@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$('h1').delegate("a","mouseover focus",function(){
+			$(this).css("background","yellow");
+		});
+		$("h1").html("<a href='#'>내용</a>")
+	});
+</script>
+</head>
+<body>
+delegate():선택한 요소의 하위요소에 이벤트 등록, 동적으로 생성될 요소 사용가능
+<h1>abc</h1>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{	margin:0;	}
+	body{padding:100px;}
+</style>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {//on(jquery) : addEventListioner()
+		var val=0;
+		$('progress').on('click',function(){
+			$(this).val(val);
+			$('#info').html(val);
+			if(val<100){
+				val+=10;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<h3>그래프 클릭</h3>
+<progress min=0 max=100 value=0></progress>
+<span id="info"></span>
+</body>
+</html>

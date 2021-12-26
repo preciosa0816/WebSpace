@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	//mouseout: 해당요소에서 마우스포인터가 벗어나면 이벤트 발생
+	$("#box_1").on("mouseout",function(){
+		$("#box_1").css("background","yellow");
+	});
+	//mouseleave: 대상 요소를 포함한 범위에서  마우스포인터가 벗어나면 이벤트 발생
+	$("#box_2").on("mouseleave",function(){
+		$("#box_2").css("background","pink");
+	});
+});
+
+	
+</script>
+</head>
+<body>
+<h1>mouseout</h1>
+<div id="box_1">
+<p><a href="#">내용1</a></p>
+<p><a href="#">내용2</a></p>
+<p><a href="#">내용3</a></p>
+</div>
+
+<h1>mouseleave</h1>
+<div id="box_2">
+<p><a href="#">내용4</a></p>
+<p><a href="#">내용5</a></p>
+<p><a href="#">내용6</a></p>
+</div>
+
+</body>
+</html>

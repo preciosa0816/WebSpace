@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var info= navigator.userAgent.toLowerCase(); //운영체제정보구해 소문자로 치환하기
+	var oslmg=null;
+	
+	if(info.indexOf('windows')>=0){
+		oslmg="windows.png"
+	}else if(info.indexOf('macintosh')>=0){
+		oslmg="macintosh.png"
+	}else if(info.indexOf('iphone')>=0){
+		oslmg="iphone.png"
+	}else if(info.indexOf('android')>=0){
+		oslmg="android.png"
+	}
+	
+	document.write("<img src=\"images/"+oslmg+"\">","<br>");
+	var scr=screen;
+	var sc_w=scr.width;
+	var sc_h=scr.height;
+	
+	document.write("모니터 해상도 너비:"+sc_w+"px","<br>");
+	document.write("모니터 해상도 높이:"+sc_h+"px","<br>");
+	
+</script>
+</body>
+</html>

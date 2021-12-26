@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Window 객체</title>
+	<script>
+		var pop = window.open("winpopup.html","pop1","width=300,height=400,left=300,top=50,scrollbars=yes, toolbars=yes, location=no");
+		
+	</script>
+</head>
+<body>
+
+<h3>Window 객체모델</h3>
+<p>
+	<button onclick="pop.moveTo(200,300); pop.focus();">브라우저 창위치 변경</button>
+</p>
+<p>
+	<button onclick="pop.resizeTo(500,500); pop.focus();">브라우저 창크기 변경</button>
+</p>
+</body>
+</html>

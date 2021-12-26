@@ -1,0 +1,70 @@
+
+9월 22, 2019 22:26:50.01 NEW SESSION
+9월 22, 2019 22:26:50.01 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Bookmarks cryptographer error was encountered: 
+9월 22, 2019 22:26:50.03 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Preferences cryptographer error was encountered: 
+9월 22, 2019 22:26:50.06 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Passwords cryptographer error was encountered: 
+9월 22, 2019 22:26:50.07 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Autofill Profiles cryptographer error was encountered: 
+9월 22, 2019 22:26:50.08 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Autofill cryptographer error was encountered: 
+9월 22, 2019 22:26:50.10 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Autofill Wallet Metadata cryptographer error was encountered: 
+9월 22, 2019 22:26:50.10 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Themes cryptographer error was encountered: 
+9월 22, 2019 22:26:50.12 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Typed URLs cryptographer error was encountered: 
+9월 22, 2019 22:26:50.14 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Extensions cryptographer error was encountered: 
+9월 22, 2019 22:26:50.15 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Search Engines cryptographer error was encountered: 
+9월 22, 2019 22:26:50.16 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Sessions cryptographer error was encountered: 
+9월 22, 2019 22:26:50.17 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Apps cryptographer error was encountered: 
+9월 22, 2019 22:26:50.17 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] App settings cryptographer error was encountered: 
+9월 22, 2019 22:26:50.18 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Extension settings cryptographer error was encountered: 
+9월 22, 2019 22:26:50.19 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Dictionary cryptographer error was encountered: 
+9월 22, 2019 22:26:50.19 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Favicon Images cryptographer error was encountered: 
+9월 22, 2019 22:26:50.20 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Favicon Tracking cryptographer error was encountered: 
+9월 22, 2019 22:26:50.20 [12804:6388:0922/222649.997:ERROR:data_type_manager_impl.cc(38)] Send Tab To Self cryptographer error was encountered: 
+9월 22, 2019 22:27:00.11 
+9월 22, 2019 22:27:00.12 KLIB_SelfTest return : KLR_OK
+9월 22, 2019 22:27:11.71 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Bookmarks cryptographer error was encountered: 
+9월 22, 2019 22:27:11.73 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Preferences cryptographer error was encountered: 
+9월 22, 2019 22:27:11.74 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Passwords cryptographer error was encountered: 
+9월 22, 2019 22:27:11.75 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Autofill Profiles cryptographer error was encountered: 
+9월 22, 2019 22:27:11.76 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Autofill cryptographer error was encountered: 
+9월 22, 2019 22:27:11.77 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Autofill Wallet Metadata cryptographer error was encountered: 
+9월 22, 2019 22:27:11.78 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Themes cryptographer error was encountered: 
+9월 22, 2019 22:27:11.79 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Typed URLs cryptographer error was encountered: 
+9월 22, 2019 22:27:11.81 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Extensions cryptographer error was encountered: 
+9월 22, 2019 22:27:11.82 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Search Engines cryptographer error was encountered: 
+9월 22, 2019 22:27:11.83 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Sessions cryptographer error was encountered: 
+9월 22, 2019 22:27:11.84 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Apps cryptographer error was encountered: 
+9월 22, 2019 22:27:11.85 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] App settings cryptographer error was encountered: 
+9월 22, 2019 22:27:11.86 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Extension settings cryptographer error was encountered: 
+9월 22, 2019 22:27:11.87 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Dictionary cryptographer error was encountered: 
+9월 22, 2019 22:27:11.88 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Favicon Images cryptographer error was encountered: 
+9월 22, 2019 22:27:11.89 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Favicon Tracking cryptographer error was encountered: 
+9월 22, 2019 22:27:11.90 [19156:19152:0922/222711.718:ERROR:data_type_manager_impl.cc(38)] Send Tab To Self cryptographer error was encountered: 
+9월 22, 2019 22:27:22.42 
+9월 22, 2019 22:27:22.44 KLIB_SelfTest return : KLR_OK
+9월 22, 2019 22:27:54.37 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Bookmarks cryptographer error was encountered: 
+9월 22, 2019 22:27:54.39 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Preferences cryptographer error was encountered: 
+9월 22, 2019 22:27:54.40 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Passwords cryptographer error was encountered: 
+9월 22, 2019 22:27:54.41 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Autofill Profiles cryptographer error was encountered: 
+9월 22, 2019 22:27:54.42 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Autofill cryptographer error was encountered: 
+9월 22, 2019 22:27:54.44 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Autofill Wallet Metadata cryptographer error was encountered: 
+9월 22, 2019 22:27:54.45 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Themes cryptographer error was encountered: 
+9월 22, 2019 22:27:54.46 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Typed URLs cryptographer error was encountered: 
+9월 22, 2019 22:27:54.47 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Extensions cryptographer error was encountered: 
+9월 22, 2019 22:27:54.48 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Search Engines cryptographer error was encountered: 
+9월 22, 2019 22:27:54.49 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Sessions cryptographer error was encountered: 
+9월 22, 2019 22:27:54.50 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Apps cryptographer error was encountered: 
+9월 22, 2019 22:27:54.51 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] App settings cryptographer error was encountered: 
+9월 22, 2019 22:27:54.52 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Extension settings cryptographer error was encountered: 
+9월 22, 2019 22:27:54.54 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Dictionary cryptographer error was encountered: 
+9월 22, 2019 22:27:54.55 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Favicon Images cryptographer error was encountered: 
+9월 22, 2019 22:27:54.56 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Favicon Tracking cryptographer error was encountered: 
+9월 22, 2019 22:27:54.57 [19708:19712:0922/222754.376:ERROR:data_type_manager_impl.cc(38)] Send Tab To Self cryptographer error was encountered: 
+9월 22, 2019 23:16:25.02 [19708:19820:0922/231625.027:ERROR:socket_stream.cc(219)] Closing stream with result -2
+9월 23, 2019 24:42:44.64 [19708:19820:0923/004244.639:ERROR:socket_stream.cc(219)] Closing stream with result -2
+9월 23, 2019 24:46:32.90 [19708:19820:0923/004632.901:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+9월 23, 2019 03:46:31.95 [19708:19712:0923/034631.957:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+9월 23, 2019 19:21:03.99 [19708:19820:0923/192103.990:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+9월 23, 2019 19:21:04.45 [19708:19164:0923/192104.002:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+9월 23, 2019 19:21:04.48 [19708:19820:0923/192104.282:ERROR:checkin_request.cc(225)] Failed to get checkin response. Fetcher failed. Retrying.
+9월 23, 2019 19:21:04.50 [19708:19712:0923/192104.488:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+9월 23, 2019 20:26:44.60 [19708:19820:0923/202644.600:ERROR:socket_stream.cc(219)] Closing stream with result -2
+9월 23, 2019 21:12:21.80 [19708:19820:0923/211221.805:ERROR:socket_stream.cc(219)] Closing stream with result -2

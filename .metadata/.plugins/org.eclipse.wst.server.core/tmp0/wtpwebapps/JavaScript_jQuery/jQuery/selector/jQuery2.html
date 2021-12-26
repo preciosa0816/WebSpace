@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+	.abc{
+		font-size:30px;
+	}
+	.add_div{
+	background-color: orange;
+	}
+</style>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+// 	기본형:$().ready();
+	$(document).ready(function(){
+		$('span').css("color","blue");
+		$('tr:even').css("backgroundColor","pink");
+		$('tr:odd').css("backgroundColor","yellow");
+		$('div').addClass("add_div");
+	});
+</script>
+</head>
+<body>
+	<span>Simple</span> <!-- span:오른쪽 진행 / 다른 것을 하고 싶을때 -->
+	<table>
+		<tr>
+			<th>제목</th>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+		</tr>
+		<tr>
+			<td>010-1234-1234</td>
+		</tr>
+		<tr>
+			<td>서울 마포구</td>
+		</tr>
+		<tr>
+			<td>Java 개발자</td>
+		</tr>
+	</table>
+	<div class="abc">jQuery</div>
+</body>
+</html>

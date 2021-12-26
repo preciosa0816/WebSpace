@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../jQuery/js/jquery-3.4.1.js"></script>
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<style type="text/css">
+	table{
+		border:1px solid blue;
+	}
+	td{
+		background-color: ivory;
+	}
+</style>
+<script type="text/javascript">
+	$(function() {
+		$.getJSON("item.json",function(data, textStatus){
+			//제목(head) 행
+			$("#treeData").append("<tr><td>id</td><td>name</td><td>price</td><td>desc</td></tr>");
+			
+			//2~n번째 행
+			$.each(data, function() {
+				$("#treeData").append("<tr><td>"+this.id+"</td><td>"+this.name+"</td><td>"+this.price+"</td><td>"+this.description+"</td></tr>");
+				
+			});
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<table id="treeData">	
+	</table>
+</body>
+</html>

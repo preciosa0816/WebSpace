@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax 사용상태</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="../jQuery/js/jquery-3.4.1.js"></script> -->
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btnRead").click(function() {
+			$.ajax({ //최초의 한번 이후에는 있는 정보를 사용 (없을때만 서버방문)
+				url:"resource.html",
+				datatype:"html",
+				success:function(data){
+					$("#container").html(data);
+				}
+			});
+			return false;
+			//$("#container").load('resource.html');
+		});
+		
+		$("#btnSubject").click(function() {
+			$.ajax({ //최초의 한번 이후에는 있는 정보를 사용 (없을때만 서버방문)
+				url:"subjectList.jsp",
+				datatype:"html",
+				success:function(data){
+					$("#container").html(data);
+				}
+			});
+			return false;
+		});
+		
+		$("#btnCheckLogin").click(function() {
+			$.ajax({ //최초의 한번 이후에는 있는 정보를 사용 (없을때만 서버방문)
+				url:"checkLogin.jsp?no=3",
+				datatype:"html",
+				success:function(data){
+					$("#container").html(data);
+				}
+			});
+			return false;
+		});
+		
+	});
+</script>
+</head>
+<body>
+<button id="btnRead">서버에서 데이터 가져오기</button>
+<button id="btnSubject">교과목 체크리스트</button>
+<button id="btnCheckLogin">로그인 체크</button>
+
+<div id="container">이곳에 내용 가져오기</div>
+
+</body>
+</html>

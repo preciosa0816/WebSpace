@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	var arr1=[{"area":"서울","name":"무대리"},{"area":"부산","name":"홍과장"},
+			{"area":"대전","name":"박사장"},{"area":"서울","name":"빅마마"}]
+	
+	//$.map(): 배열에 저장된 요소만큼 메소드 반복실행.
+	//메서드 실행시 매개변수1,2에는 배열의 데이터와 인덱스값이 인덱스 오름차순으로 대입
+	//반환된 데이터는 새 배열에 저장되고 새롭게 가공된 배열객체 반환
+	var arr2=$.map(arr1,function(a,b){
+		if(a.area=="서울"){
+			return a;
+		}
+	});
+	console.log(arr2);
+	console.log("====first End====");
+	
+	//$.grep(): 배열에 저장된 요소만큼 메소드 반복실행.
+	//메서드 실행시 매개변수1,2에는 배열의 데이터와 인덱스값이 인덱스 오름차순으로 대입
+	//반환된 데이터가 true면 인덱스 오름차순으로 데이터를 새 배열에 저장하고 새롭게 가공된 배열객체 반환
+	var arr3=$.grep(arr1,function(a,b){ //true이면 arr3에 저장됨
+		if(a.area=="서울"){
+			return true;
+		}else{
+			return false;
+		}
+	});
+	console.log(arr3);
+	console.log("====Second End====");
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//$("요소선택").html() : 선택한 요소의 하위요소를 가져와 문자열로 반환
+		var result_1=$("#sec_1").html();
+		console.log(result_1);
+		//$("요소선택").html("새요소") : 선택한 요소의 하위요소를  제거하고 지정한 새 요소를 생성
+		$("#sec_1 p").html("<a href=\"#\">Text1</a>");
+		
+		//$("요소선택").text() : 선택한 요소의 텍스트만 가져옴
+		var result_2=$("#sec_2").text();
+		console.log(result_2);
+		//$("요소선택").text(:새 텍스트) : 선택한 요소의 하위요소를  제거하고 지정한  텍스트를 생성
+		$("#sec_2 h2").text("text()");
+
+	})
+</script>
+</head>
+<body>
+	<h1>
+		<strong>객체 조작 및 생성</strong>
+	</h1>
+	<section id="sec_1">
+	<h2>
+		<em>html()</em>
+	</h2>
+	<p>내용1</p>
+	</section>
+	
+	<section id="sec_2">
+	<h2>
+	<em>텍스트()</em>
+	</h2>
+	<p>내용2</p>
+	</section>
+</body>
+</html>

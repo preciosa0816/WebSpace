@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+// 		$("#rel_site").on("change",function(){
+// 			$(".txt").text($(this).val());
+// 		});
+		$("#rel_site").change(function(){
+			$(".txt").text($(this).val());
+		});
+	});
+</script>
+</head>
+<body>
+<select id="rel_site">
+<option value="">사이트 선택</option>
+<option value="www.google.com">구글</option>
+<option value="www.naver.com">네이버</option>
+<option value="www.daum.net">다음</option>
+</select>
+<p class="txt">URL</p>
+</body>
+</html>

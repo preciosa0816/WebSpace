@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="../jQuery/js/jquery-3.4.1.js"></script> -->
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.ajax({
+			url : "news_test.php",
+			datatype : "xml",
+			success : function(data) {
+				var $items=$(data).find("item");
+				
+				if($items.legnth>0){
+					$items=$items.slice(0,10);
+					var $ulTag=$("<ul />");
+					$.each($items, function(i,o){
+						var $title=$(o).find("title").text();
+						var $link=$(o).find("link").text();
+						
+						var $aTag=$("<a />").attr({"href":$link, "target":"_blank"}).text($title);
+						var $liTag = $("<li/>").append($liTag);
+						$ulTag.append($liTag);
+					});
+					$(".wrap").append($ulTag);
+					
+				}
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="wrap"></div>
+</body>
+</html>

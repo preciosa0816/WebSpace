@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#box{
+width:200px;
+height:200px;
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+<div id="box">색상 바꾸기</div>
+<button onclick="setColor()">Click</button>
+<script>
+var color=document.getElementById("box");
+
+function setColor() {//box의 배경색
+	color.style.color="white";
+	color.style.backgroundColor="green";
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax 사용전</title>
+<script src="../jQuery/js/jquery-3.4.1.js"></script>
+<script src="../jQuery/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//클릭할때마다 매번 서버에 방문함
+		$("#btnRead").click(function() {
+			$("#container").load('resource.html');
+		});
+	});
+</script>
+</head>
+<body>
+<button id="btnRead">서버에서 데이터 가져오기</button>
+<div id="container">이곳에 내용 가져오기</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+body{
+	font-family:굴림체;
+}
+
+fieldset{
+	padding:10px;
+	padding-left:30px;
+}
+ul,li{
+	list-style-type: none;
+	margin:5px;
+	padding:5px;
+}
+li{
+	margin:5px;
+}
+label{
+	width: 80px;
+	float: left;
+	margin-right: 5px;
+}
+/* #nottext { */
+/*   background-color: lightgreen; */
+/* } */
+/* input{ */
+/*   background-color: green; */
+  
+/* } */
+/* input[type=text]{ */
+/*   background-color: white; */
+/* } */
+input:not([type=text]){
+	background-color: lightgreen;
+	border: solid black 1px;
+}
+filedset{
+width:500px;
+}
+</style>
+</head>
+<body>
+<div>
+<h1>예약하기</h1>
+<fieldset>
+	<legend>예약자정보</legend>
+	<ul>
+		<li><label>예약자</label><input type="text" name="name"></li>
+		<li><label>연락처</label><input type="phone" name="phone"></li>
+		<li><label>예약 인원</label><input type="number" name="num"></li>
+		<li><label>입금은행</label><input type="text" name="bank"></li>
+		
+	</ul>
+</fieldset>
+
+</div>
+</body>
+</html>
